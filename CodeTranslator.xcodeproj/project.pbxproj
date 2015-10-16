@@ -12,6 +12,9 @@
 		23CE3A541BD0607C00999BED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23CE3A531BD0607C00999BED /* Images.xcassets */; };
 		23CE3A571BD0607C00999BED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23CE3A551BD0607C00999BED /* Main.storyboard */; };
 		23CE3A631BD0607C00999BED /* CodeTranslatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE3A621BD0607C00999BED /* CodeTranslatorTests.swift */; };
+		23CE3A6D1BD0616800999BED /* MorseCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE3A6C1BD0616800999BED /* MorseCode.swift */; };
+		23CE3A6F1BD080E100999BED /* NumberCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE3A6E1BD080E100999BED /* NumberCode.swift */; };
+		23CE3A711BD0896400999BED /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CE3A701BD0896400999BED /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 		23CE3A5C1BD0607C00999BED /* CodeTranslatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeTranslatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		23CE3A611BD0607C00999BED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		23CE3A621BD0607C00999BED /* CodeTranslatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeTranslatorTests.swift; sourceTree = "<group>"; };
+		23CE3A6C1BD0616800999BED /* MorseCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MorseCode.swift; sourceTree = "<group>"; };
+		23CE3A6E1BD080E100999BED /* NumberCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberCode.swift; sourceTree = "<group>"; };
+		23CE3A701BD0896400999BED /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +83,12 @@
 			children = (
 				23CE3A4F1BD0607C00999BED /* AppDelegate.swift */,
 				23CE3A511BD0607C00999BED /* ViewController.swift */,
+				23CE3A6C1BD0616800999BED /* MorseCode.swift */,
+				23CE3A6E1BD080E100999BED /* NumberCode.swift */,
 				23CE3A531BD0607C00999BED /* Images.xcassets */,
 				23CE3A551BD0607C00999BED /* Main.storyboard */,
 				23CE3A4D1BD0607C00999BED /* Supporting Files */,
+				23CE3A701BD0896400999BED /* StringExtensions.swift */,
 			);
 			path = CodeTranslator;
 			sourceTree = "<group>";
@@ -210,6 +219,9 @@
 			files = (
 				23CE3A521BD0607C00999BED /* ViewController.swift in Sources */,
 				23CE3A501BD0607C00999BED /* AppDelegate.swift in Sources */,
+				23CE3A711BD0896400999BED /* StringExtensions.swift in Sources */,
+				23CE3A6D1BD0616800999BED /* MorseCode.swift in Sources */,
+				23CE3A6F1BD080E100999BED /* NumberCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
