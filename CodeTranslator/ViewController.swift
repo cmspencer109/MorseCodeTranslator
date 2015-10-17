@@ -8,11 +8,12 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSTextFieldDelegate {
 
     @IBOutlet weak var inputTextField: NSTextField! {
         didSet {
             inputTextField.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            inputTextField.delegate = self
         }
     }
     @IBOutlet weak var translateButton: NSButton! {
@@ -22,19 +23,28 @@ class ViewController: NSViewController {
     }
     @IBOutlet weak var messageLabel: NSTextField! {
         didSet {
-            messageLabel.stringValue = "Click to translate code."
+            messageLabel.stringValue = "Enter message to translate."
         }
     }
     @IBOutlet weak var outputTextField: NSTextField! {
         didSet {
             outputTextField.lineBreakMode = NSLineBreakMode.ByWordWrapping
-            outputTextField.textColor = NSColor.purpleColor()
+            outputTextField.textColor = NSColor.blueColor()
         }
     }
-    @IBOutlet weak var codeSelectButton: NSPopUpButton!
+    @IBOutlet weak var codeSelectButton: NSPopUpButton! {
+        didSet {
+            codeSelectButton.target = self
+            codeSelectButton.action = "selectionDidChange"
+        }
+    }
     
     let morseCode = MorseCode()
     let numberCode = NumberCode()
+    let englishTranslator = EnglishTranslator()
+    
+    var englishMessage: String?
+    var codeMessage: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,16 +58,25 @@ class ViewController: NSViewController {
         }
     }
 
-    @IBAction func translateButtonClicked(sender: AnyObject) {
-        if codeSelectButton.titleOfSelectedItem == "English" {
-            outputTextField.stringValue = ""
-            outputTextField.stringValue = inputTextField.stringValue
-        } else if codeSelectButton.titleOfSelectedItem == "Morse Code" {
-            outputTextField.stringValue = ""
-            outputTextField.stringValue = morseCode.translate(inputTextField.stringValue)
+    override func controlTextDidChange(obj: NSNotification) {
+        englishMessage = englishTranslator.translateToEnglish(inputTextField.stringValue)
+        codeMessage = translateToCode(englishMessage!)
+        outputTextField.stringValue = codeMessage!
+    }
+    
+    func selectionDidChange() {
+        codeMessage = translateToCode(englishMessage!)
+        outputTextField.stringValue = codeMessage!
+    }
+    
+    func translateToCode(englishMessage: String) -> String {
+        outputTextField.stringValue = ""
+        if codeSelectButton.titleOfSelectedItem == "Morse Code" {
+            return morseCode.translate(englishMessage)
         } else if codeSelectButton.titleOfSelectedItem == "Numbers" {
-            outputTextField.stringValue = ""
-            outputTextField.stringValue = numberCode.translate(inputTextField.stringValue)
+            return numberCode.translate(englishMessage)
+        } else {
+            return englishMessage
         }
     }
 

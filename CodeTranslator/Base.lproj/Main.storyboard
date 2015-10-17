@@ -687,8 +687,8 @@
                             <textField verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aEa-wn-QA4">
                                 <rect key="frame" x="20" y="20" width="440" height="97"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="440" id="f6M-9E-Jaa"/>
-                                    <constraint firstAttribute="height" constant="97" id="qbt-Mh-Oxg"/>
+                                    <constraint firstAttribute="width" constant="440" id="TXY-AH-Epq"/>
+                                    <constraint firstAttribute="height" constant="97" id="rYO-Gu-i7p"/>
                                 </constraints>
                                 <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="left" placeholderString="Translation output" drawsBackground="YES" id="snY-IJ-qFm">
                                     <font key="font" metaFont="system"/>
@@ -696,24 +696,14 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="EHk-ms-IL8">
-                                <rect key="frame" x="14" y="118" width="82" height="32"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="71G-Mh-sLe">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="translateButtonClicked:" target="XfG-lQ-9wD" id="TJT-6W-4Z6"/>
-                                </connections>
-                            </button>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gvT-at-6Gr">
-                                <rect key="frame" x="363" y="122" width="100" height="26"/>
-                                <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="0qM-RP-9fO">
+                                <rect key="frame" x="337" y="122" width="126" height="26"/>
+                                <popUpButtonCell key="cell" type="push" title="English" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="dM1-A4-Bm3" id="0qM-RP-9fO">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="SWc-JG-8k8">
                                         <items>
-                                            <menuItem title="English" id="dM1-A4-Bm3"/>
+                                            <menuItem title="English" state="on" id="dM1-A4-Bm3"/>
                                             <menuItem title="Morse Code" id="w0b-zl-tdF"/>
                                             <menuItem title="Numbers" id="PuA-F9-wlf"/>
                                         </items>
@@ -721,7 +711,7 @@
                                 </popUpButtonCell>
                             </popUpButton>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ARn-Z6-e5E">
-                                <rect key="frame" x="96" y="127" width="38" height="17"/>
+                                <rect key="frame" x="18" y="127" width="38" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="IXe-qg-P1k">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -730,19 +720,17 @@
                             </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="gvT-at-6Gr" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="339" id="0tN-t7-Vzf"/>
                             <constraint firstAttribute="trailing" secondItem="gvT-at-6Gr" secondAttribute="trailing" constant="20" id="2c7-eZ-YVH"/>
-                            <constraint firstItem="EHk-ms-IL8" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="3Ue-Nl-JKk"/>
+                            <constraint firstItem="ARn-Z6-e5E" firstAttribute="top" secondItem="kfX-UP-qGa" secondAttribute="bottom" constant="8" id="4OE-29-xUV"/>
+                            <constraint firstAttribute="centerX" secondItem="aEa-wn-QA4" secondAttribute="centerX" id="5EW-cN-U7S"/>
+                            <constraint firstItem="aEa-wn-QA4" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="5iI-ax-w16"/>
                             <constraint firstItem="gvT-at-6Gr" firstAttribute="top" secondItem="kfX-UP-qGa" secondAttribute="bottom" constant="6" id="LAy-4h-ZQd"/>
-                            <constraint firstAttribute="centerX" secondItem="aEa-wn-QA4" secondAttribute="centerX" id="OXL-88-95W"/>
-                            <constraint firstItem="aEa-wn-QA4" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="acU-DQ-k1n"/>
-                            <constraint firstItem="EHk-ms-IL8" firstAttribute="top" secondItem="kfX-UP-qGa" secondAttribute="bottom" constant="6" id="eA1-ax-r31"/>
+                            <constraint firstItem="ARn-Z6-e5E" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="eu6-to-5Qc"/>
                             <constraint firstItem="kfX-UP-qGa" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="gDA-At-Rbq"/>
-                            <constraint firstItem="ARn-Z6-e5E" firstAttribute="top" secondItem="kfX-UP-qGa" secondAttribute="bottom" constant="8" id="hdA-BN-IrJ"/>
                             <constraint firstItem="kfX-UP-qGa" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="iiQ-N4-IOc"/>
-                            <constraint firstItem="aEa-wn-QA4" firstAttribute="top" secondItem="EHk-ms-IL8" secondAttribute="bottom" constant="8" id="juE-Ks-QZj"/>
                             <constraint firstAttribute="centerX" secondItem="kfX-UP-qGa" secondAttribute="centerX" id="lou-w6-jyX"/>
-                            <constraint firstItem="ARn-Z6-e5E" firstAttribute="leading" secondItem="EHk-ms-IL8" secondAttribute="trailing" constant="8" id="tKw-UA-qWD"/>
-                            <constraint firstItem="gvT-at-6Gr" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="365" id="tjl-O0-nbl"/>
+                            <constraint firstItem="aEa-wn-QA4" firstAttribute="top" secondItem="ARn-Z6-e5E" secondAttribute="bottom" constant="10" id="ru5-gh-AXb"/>
                         </constraints>
                     </view>
                     <connections>
@@ -750,7 +738,6 @@
                         <outlet property="inputTextField" destination="kfX-UP-qGa" id="gEq-iQ-viM"/>
                         <outlet property="messageLabel" destination="ARn-Z6-e5E" id="730-tB-sd0"/>
                         <outlet property="outputTextField" destination="aEa-wn-QA4" id="KdV-Iw-O01"/>
-                        <outlet property="translateButton" destination="EHk-ms-IL8" id="Ctq-m3-2A5"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
